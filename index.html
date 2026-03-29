@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dhruv Ramaiya — Founder of Hoblie. Discover DIY hobby kits for adults." />
+  <title>Dhruv — Hoblie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="page-shell">
+
+  <!-- ═══════════════════════════════════════════
+       1. HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-logo">
+      <img src="hoblie-logo-white.png" alt="Hoblie"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+      <span class="logo-fallback" style="display:none">Hoblie</span>
+    </div>
+
+    <h1 class="hero-heading">Hey, glad we met!</h1>
+    <p class="hero-subtext">
+      Pick your first hobby kit on hobliekits.com and find something
+      special from me in the pack.
+    </p>
+
+    <div class="discount-block">
+      <span class="discount-label">Use this at checkout</span>
+      <div class="discount-pill">
+        <span class="discount-code" id="discount-code">DHRUV20</span>
+        <button class="copy-btn" id="copy-btn" aria-label="Copy discount code" onclick="copyDiscountCode()">
+          Copy
+        </button>
+      </div>
+    </div>
+
+    <!-- TODO: Replace # with your Hoblie store URL -->
+    <a href="#" class="btn btn-amber" target="_blank" rel="noopener">
+      Shop Hoblie Kits →
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       2. SAVE CONTACT
+  ═══════════════════════════════════════════ -->
+  <section class="contact-section fade-in">
+    <a href="dhruv.vcf" download="Dhruv-Ramaiya-Hoblie.vcf" class="btn btn-contact">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      Save Dhruv's Contact
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       3. KNOW HOBLIE — CAROUSEL
+  ═══════════════════════════════════════════ -->
+  <section class="carousel-section fade-in">
+    <div class="section-header">
+      <h2 class="section-heading">What is Hoblie?</h2>
+    </div>
+
+    <div class="carousel-wrapper" role="region" aria-label="About Hoblie">
+      <div class="carousel-track" id="carousel-track">
+
+        <!-- Slide 1 -->
+        <div class="slide" role="group" aria-label="Slide 1 of 5">
+          <div class="slide-card">
+            <span class="slide-tag">The Problem</span>
+            <h3 class="slide-title">Adulting is serious business.<br>Too serious.</h3>
+            <p class="slide-body">
+              We forgot how to make things. How to play. How to feel proud of
+              something we built with our own hands.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" role="group" aria-label="Slide 2 of 5">
+          <div class="slide-card">
+            <span class="slide-tag">What We Do</span>
+            <h3 class="slide-title">Hobby kits made for adults.</h3>
+            <p class="slide-body">
+              Hoblie makes DIY hobby kits for adults. Painting. Sculpting.
+              Threading. Or Just Fun. Everything you need in one pack — no
+              experience needed.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" role="group" aria-label="Slide 3 of 5">
+          <div class="slide-card">
+            <span class="slide-tag">Why It Works</span>
+            <h3 class="slide-title">A sunday jam, not a school project.</h3>
+            <p class="slide-body">
+              Each kit is designed to make a sunday jam, not a school project.
+              Pick it up. Put it down. Have fun.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide" role="group" aria-label="Slide 4 of 5">
+          <div class="slide-card">
+            <span class="slide-tag">Our Goal</span>
+            <h3 class="slide-title">Rediscover joy, worldwide.</h3>
+            <p class="slide-body">
+              We want people around the globe to rediscover the joy of
+              creativity and to build the confidence that they can still
+              learn new things.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 5 — CTA -->
+        <div class="slide slide-cta" role="group" aria-label="Slide 5 of 5">
+          <div class="slide-card slide-card--cta">
+            <span class="slide-tag">Start Here</span>
+            <h3 class="slide-title">Want to pick your first hobby?</h3>
+            <!-- TODO: Replace # with your Hoblie store URL -->
+            <a href="#" class="btn btn-teal" target="_blank" rel="noopener">
+              Explore Kits →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="carousel-controls" aria-label="Carousel controls">
+      <button class="carousel-btn" id="prev-btn" aria-label="Previous slide" onclick="prevSlide()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+      <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Slide indicators">
+        <button class="dot active" data-index="0" role="tab" aria-label="Go to slide 1" aria-selected="true" onclick="goToSlide(0)"></button>
+        <button class="dot" data-index="1" role="tab" aria-label="Go to slide 2" aria-selected="false" onclick="goToSlide(1)"></button>
+        <button class="dot" data-index="2" role="tab" aria-label="Go to slide 3" aria-selected="false" onclick="goToSlide(2)"></button>
+        <button class="dot" data-index="3" role="tab" aria-label="Go to slide 4" aria-selected="false" onclick="goToSlide(3)"></button>
+        <button class="dot" data-index="4" role="tab" aria-label="Go to slide 5" aria-selected="false" onclick="goToSlide(4)"></button>
+      </div>
+      <button class="carousel-btn" id="next-btn" aria-label="Next slide" onclick="nextSlide()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       4. FIND US ON
+  ═══════════════════════════════════════════ -->
+  <section class="find-us-section fade-in">
+    <h2 class="section-heading">Find us on</h2>
+
+    <div class="find-us-links">
+
+      <!-- Amazon -->
+      <!-- TODO: Replace # with your Amazon store URL -->
+      <a href="#" class="find-link" target="_blank" rel="noopener" aria-label="Hoblie on Amazon">
+        <span class="find-link-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.074-1.047-.872-1.234-1.275-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.642-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.891 5.942-1.099v-.41c0-.753.06-1.642-.383-2.294-.385-.581-1.124-.822-1.776-.822-1.206 0-2.277.618-2.541 1.898-.054.285-.261.567-.549.582l-3.064-.331c-.259-.056-.548-.266-.474-.663C5.83 2.554 8.824 1.5 11.494 1.5c1.416 0 3.267.376 4.384 1.448 1.416 1.322 1.281 3.085 1.281 5.006v4.536c0 1.365.566 1.963 1.099 2.699.187.262.227.577-.01.773l-2.104 1.833zm3.069 1.714C18.557 21.387 15.388 23 12.164 23 7.697 23 3.67 21.276.84 18.396c-.231-.222-.025-.525.254-.354C3.808 19.908 7.467 21 11.255 21c2.547 0 5.346-.527 7.924-1.618.389-.167.715.254.034.127zm.949-2.726c-.317-.406-2.088-.192-2.886-.096-.243.029-.28-.182-.061-.336 1.414-.994 3.733-.707 4.003-.374.271.334-.071 2.652-1.399 3.759-.203.172-.397.08-.307-.143.299-.745.967-2.412.65-2.81z"/>
+          </svg>
+        </span>
+        <span class="find-link-text">Hoblie on Amazon</span>
+        <svg class="find-link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+      <!-- Blinkit -->
+      <!-- TODO: Replace # with your Blinkit URL -->
+      <a href="#" class="find-link" target="_blank" rel="noopener" aria-label="Hoblie on Blinkit">
+        <span class="find-link-icon find-link-icon--blinkit">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M13 2L4.09 12.97l6.73-.82L10 22l8.91-10.97-6.73.82L13 2z"/>
+          </svg>
+        </span>
+        <span class="find-link-text">Hoblie on Blinkit</span>
+        <svg class="find-link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+      <!-- Website -->
+      <a href="https://hobliekits.com" class="find-link" target="_blank" rel="noopener" aria-label="Visit hobliekits.com">
+        <span class="find-link-icon find-link-icon--web">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </span>
+        <span class="find-link-text">hobliekits.com</span>
+        <svg class="find-link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       5. FOLLOW US
+  ═══════════════════════════════════════════ -->
+  <section class="follow-section fade-in">
+    <!-- TODO: Replace # with your Instagram URL -->
+    <a href="#" class="instagram-card" target="_blank" rel="noopener" aria-label="Follow Hoblie on Instagram">
+      <div class="instagram-card-inner">
+        <span class="instagram-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </span>
+        <div class="instagram-text">
+          <strong>Join us on Instagram</strong>
+          <span>Here we do crazy fun things.</span>
+        </div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </div>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       6. OUR OTHER BRANDS
+  ═══════════════════════════════════════════ -->
+  <section class="brands-section fade-in">
+    <h2 class="section-heading">More from our world</h2>
+
+    <div class="brands-grid">
+
+      <!-- MySkillShaala -->
+      <div class="brand-card-wrap">
+        <button
+          class="brand-card"
+          aria-expanded="false"
+          aria-controls="drawer-myskillshaala"
+          onclick="toggleBrand(this)"
+        >
+          <div class="brand-logo-wrap">
+            <img src="myskillshaala-logo.png" alt="MySkillShaala logo" class="brand-logo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="brand-logo-fallback" style="display:none">MSS</div>
+          </div>
+          <span class="brand-name">MySkill<br>Shaala</span>
+          <svg class="brand-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="brand-drawer" id="drawer-myskillshaala" role="region" aria-label="About MySkillShaala">
+          <div class="brand-drawer-inner">
+            <p>Free online, gamified learning community for kids to build skills for life.</p>
+            <!-- TODO: Replace # with MySkillShaala URL -->
+            <a href="#" class="btn btn-teal-outline" target="_blank" rel="noopener">
+              Visit MySkillShaala →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VibhutiCrafts -->
+      <div class="brand-card-wrap">
+        <button
+          class="brand-card"
+          aria-expanded="false"
+          aria-controls="drawer-vibhuticrafts"
+          onclick="toggleBrand(this)"
+        >
+          <div class="brand-logo-wrap">
+            <img src="vibhuticrafts-logo.png" alt="VibhutiCrafts logo" class="brand-logo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="brand-logo-fallback" style="display:none">VC</div>
+          </div>
+          <span class="brand-name">Vibhuti<br>Crafts</span>
+          <svg class="brand-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="brand-drawer" id="drawer-vibhuticrafts" role="region" aria-label="About VibhutiCrafts">
+          <div class="brand-drawer-inner">
+            <p>Arts &amp; Crafts Essentials, Curated &amp; Designed by hobbyists themselves — not traders.</p>
+            <!-- TODO: Replace # with VibhutiCrafts URL -->
+            <a href="#" class="btn btn-teal-outline" target="_blank" rel="noopener">
+              Visit VibhutiCrafts →
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Made with <span aria-label="love">♥</span> by Hoblie &nbsp;&middot;&nbsp;
+      <a href="https://hobliekits.com" target="_blank" rel="noopener">hobliekits.com</a>
+    </p>
+  </footer>
+
+</div><!-- /.page-shell -->
+
+<script src="app.js"></script>
+</body>
+</html>
