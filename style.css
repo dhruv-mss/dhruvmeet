@@ -445,8 +445,16 @@ button {
   color: #232f3e;
   flex-shrink: 0;
 }
+.find-link-icon--amazon {
+  background: var(--color-white);
+  overflow: hidden;
+}
+.find-link-icon--amazon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
 .find-link-icon--blinkit {
-  color: #f5c518;
   background: #1a1a1a;
   border-color: #1a1a1a;
 }
